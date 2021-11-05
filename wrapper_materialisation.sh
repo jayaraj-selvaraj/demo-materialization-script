@@ -911,14 +911,8 @@ system_sequence="-1029"
                                 cat ${MAT_LOGS_DIR}/tmp/${ODATE}_${FEEDNAME}_${TARGET_NAME}_${M_RUN_ID}/JUNIPER_EXT_TARGET_CONN_MASTER_${target_conn_sequence}_HDP_ENCRYPTED_PASSWORD_response.txt | grep "message"|cut -d ':' -f3|cut -d '"' -f2 >${MAT_LOGS_DIR}/tmp/${ODATE}_${FEEDNAME}_${TARGET_NAME}_${M_RUN_ID}/JUNIPER_EXT_TARGET_CONN_MASTER_${target_conn_sequence}_HDP_ENCRYPTED_PASSWORD.txt
                                 rm -rf ${MAT_LOGS_DIR}/tmp/${ODATE}_${FEEDNAME}_${TARGET_NAME}_${M_RUN_ID}/JUNIPER_EXT_TARGET_CONN_MASTER_${target_conn_sequence}_HDP_ENCRYPTED_PASSWORD_response.txt
 
-                                                                #############delete
-                                                                #
-                                                                #echo "7Udcstqbpx" > ${MAT_LOGS_DIR}/tmp/${ODATE}_${FEEDNAME}_${TARGET_NAME}_${M_RUN_ID}/JUNIPER_EXT_TARGET_CONN_MASTER_${target_conn_sequence}_HDP_ENCRYPTED_PASSWORD.txt
-
+                                                                
                                 hdp_password=`cat ${MAT_LOGS_DIR}/tmp/${ODATE}_${FEEDNAME}_${TARGET_NAME}_${M_RUN_ID}/JUNIPER_EXT_TARGET_CONN_MASTER_${target_conn_sequence}_HDP_ENCRYPTED_PASSWORD.txt | grep "message"|cut -d ':' -f3|cut -d '"' -f2`
-
-
-
 
 
                                 logger_info "Running materilisation script for the trigger files"
